@@ -1,0 +1,22 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Sibsp vs. Survival Regression Plot<br></h1>
+<p>This regression plot helps analyze the relationship between ticket price (Sibsp) and survival probability.<br><br></p>
+
+<h2>What Does This Graph Show?<br></h2>
+<p>The <strong>regression line</strong> predicts survival likelihood based on Sibsp price.<br>
+   The trend line suggests how increasing Sibsp affects survival probability.<br><br></p>
+
+<h2>Key Takeaways:<br></h2>
+<ul>
+    <li>Passengers with higher Sibsp generally had a higher survival probability.</li>
+    <li>The logistic regression curve models survival as a probability.</li>
+    <li>Lower Sibsp are associated with a lower chance of survival.</li>
+</ul>
+{% endblock %}
+
+{% block image %}
+<img src="{{ reg_plot_url }}" alt="Sibsp vs. Survival Regression Plot" 
+     style="width: 100%; height: auto; border-radius: 10px;">
+{% endblock %}

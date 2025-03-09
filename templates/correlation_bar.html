@@ -1,0 +1,26 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Survivor Correlation<br></h1>
+<p>This bar chart visualizes how different features correlate with survival on the Titanic. Its a more descriptive viewing of heatmap for target variable<br><br></p>
+
+<h2>What is this Chart Showing?<br></h2>
+<p>The <strong>Survivor Correlation Bar Chart</strong> shows how each variable in the dataset relates to the likelihood of survival.<br>
+    Bars extending further indicate stronger positive or negative correlations.<br><br></p>
+
+<h2>Key Takeaways: <br></h2>
+<p>Looking at the correlation values, we can determine that the factors with the highest impact on survival include:<br>
+    <br>
+    <ul>
+        <li>Sex (strongest correlation with survival)</li>
+        <li>Pclass (social class played a significant role)</li>
+        <li>Fare (fare made an impact on higher survival chances)</li>
+    </ul>
+</p>
+{% endblock %}
+
+{% block image %}
+<img src="{{ chart_url }}" alt="Survivor Correlation Bar Chart" style="width: 100%; height: auto; border-radius: 10px;">
+
+
+{% endblock %}

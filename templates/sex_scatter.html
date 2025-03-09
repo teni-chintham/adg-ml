@@ -1,0 +1,22 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Sex vs. Survival Scatter Plot<br></h1>
+<p>This scatter plot visualizes how ticket price (sex) relates to survival.<br><br></p>
+
+<h2>What Does This Graph Show?<br></h2>
+<p>The <strong>scatter plot</strong> represents individual passengers.<br>
+   The color distinguishes between those who survived (1) and those who did not (0).<br><br></p>
+
+<h2>Key Takeaways:<br></h2>
+<ul>
+    <li>Passengers with higher Sex had a higher survival rate.</li>
+    <li>Lower Sex passengers were less likely to survive.</li>
+    <li>The separation between points highlights the correlation between class and survival.</li>
+</ul>
+{% endblock %}
+
+{% block image %}
+<img src="{{ scatter_plot_url }}" alt="Sex vs. Survival Scatter Plot" style="width: 100%; height: auto; border-radius: 10px;">
+
+{% endblock %}

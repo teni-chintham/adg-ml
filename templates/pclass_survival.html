@@ -1,0 +1,22 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Pclass vs. Survival Rate<br></h1>
+<p>This visualization explores the relationship between Passenger Class (Pclass) and survival rate on the Titanic.<br><br></p>
+
+<h2>What Does This Graph Show?<br></h2>
+<p>The <strong>bar chart</strong> displays the survival rate for each passenger class (Pclass).<br>
+   The <strong>red trendline</strong> highlights the overall pattern in survival rates across different classes.<br><br></p>
+
+<h2>Key Takeaways:<br></h2>
+<ul>
+    <li>Passengers in <strong>Pclass 1</strong> had the highest survival rate, while those in <strong>Pclass 3</strong> had the lowest.</li>
+    <li>The trendline confirms a strong negative correlation between Pclass number and survival probability.</li>
+    <li>Lower-class passengers faced significantly lower survival rates, likely due to limited access to lifeboats and safety measures.</li>
+</ul>
+{% endblock %}
+
+{% block image %}
+<img src="{{ pclass_plot_url }}" alt="Pclass vs. Survival Rate Chart" 
+     style="width: 100%; height: auto; border-radius: 10px;">
+{% endblock %}

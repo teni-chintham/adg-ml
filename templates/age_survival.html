@@ -1,0 +1,23 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Age vs. Survival Rate<br></h1>
+<p>This visualization explores how Age influenced survival rates on the Titanic.<br><br></p>
+
+<h2>What Does This Graph Show?<br></h2>
+<p>The <strong>bar chart</strong> represents the survival rate at different age ranges.<br>
+   The <strong>red trendline</strong> highlights the overall survival trend across ages.<br><br></p>
+
+<h2>Key Takeaways:<br></h2>
+<ul>
+    <li>Passengers <strong>under 30</strong> had a relatively higher survival rate.</li>
+    <li>Survival rates <strong>dropped</strong> for those aged <strong>30 to 50</strong>, indicating a lower chance of survival.</li>
+    <li>Passengers <strong>over 50</strong> had a slight rebound in survival rates.</li>
+    <li>This creates a <strong>U-shaped trend</strong>, where younger and older passengers had better survival chances than middle-aged adults.</li>
+</ul>
+{% endblock %}
+
+{% block image %}
+<img src="{{ age_plot_url }}" alt="Age vs. Survival Rate Chart" 
+     style="width: 100%; height: auto; border-radius: 10px;">
+{% endblock %}

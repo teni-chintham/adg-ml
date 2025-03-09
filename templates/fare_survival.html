@@ -1,0 +1,23 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Fare vs. Survival Rate<br></h1>
+<p>This visualization helps us understand the relationship between the ticket price (Fare) and survival rate.<br><br></p>
+
+<h2>What Does This Graph Show?<br></h2>
+<p>The <strong>bar chart</strong> represents the survival rate at different fare prices.<br>
+   The <strong>red trendline</strong> shows an overall trend in the survival rate based on fare values.<br><br></p>
+
+<h2>Key Takeaways:<br></h2>
+<ul>
+    <li>Passengers who paid higher fares had a higher survival rate.</li>
+    <li>The trendline suggests a positive correlation between fare and survival probability.</li>
+    <li>Lower fare passengers had a significantly lower survival rate.</li>
+    <li>Ignore the outlier its too far away from the main data to have any significance</li>
+</ul>
+{% endblock %}
+
+{% block image %}
+<img src="{{ fare_plot_url }}" alt="Fare vs. Survival Rate Chart" 
+     style="width: 100%; height: auto; border-radius: 10px;">
+{% endblock %}

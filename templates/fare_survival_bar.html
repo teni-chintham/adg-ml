@@ -1,0 +1,27 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Fare vs Survival<br></h1>
+<p>This bar plot explores the relationship between Fare and Survival Rate on the Titanic.<br><br></p>
+
+<h2>What Does This Bar Plot Show?<br></h2>
+<p>The graph illustrates a <strong>non-linear increase</strong> in survival probability as fare amounts rise.<br>
+    In general, passengers who paid higher fares had a greater chance of survival.<br><br></p>
+
+<h2>Key Takeaways: <br></h2>
+<p>By analyzing the Fare column, we can conclude:<br>
+    <br><ul>
+        <li>Higher fare values are strongly associated with increased survival rates.</li>
+        <li>The relationship is non-linear, meaning survival does not increase at a constant rate with fare.</li>
+        <li>There is an outlier where a high-fare passenger did not survive, but this can be considered an exception.</li>
+        <li>Overall, paying more for a ticket significantly improved the likelihood of survival.</li>
+    </ul></p>
+{% endblock %}
+
+{% block image %}
+<img src="{{ chart_url }}" alt="Fare vs Survival Bar Plot" style="width: 100%; height: auto; border-radius: 10px;">
+
+<div class="button-container">
+    <a href="{{ url_for('fare_survival') }}" class="go-back-button">More Detailed</a>
+</div>
+{% endblock %}

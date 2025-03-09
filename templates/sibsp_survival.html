@@ -1,0 +1,23 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>SibSp vs. Survival Rate<br></h1>
+<p>This visualization helps us understand the relationship between the number of siblings/spouses aboard (SibSp) and survival rate.<br><br></p>
+
+<h2>What Does This Graph Show?<br></h2>
+<p>The <strong>bar chart</strong> represents the survival rate for different SibSp values.<br>
+   The <strong>red trendline</strong> highlights the overall pattern, showing that having exactly <strong>one sibling/spouse</strong> led to the highest survival rate, while larger family sizes had lower survival chances.<br><br></p>
+
+<h2>Key Takeaways:<br></h2>
+<ul>
+    <li>Passengers with <strong>one sibling/spouse</strong> had the <strong>highest survival rate</strong>.</li>
+    <li>Survival for <strong>zero and two siblings/spouses</strong> was similar.</li>
+    <li>Passengers with <strong>four or more siblings/spouses</strong> had the <strong>lowest survival rate</strong>.</li>
+    <li>The trendline suggests that both <strong>being alone</strong> and <strong>having too many family members</strong> reduced survival probability.</li>
+</ul>
+{% endblock %}
+
+{% block image %}
+<img src="{{ sibsp_plot_url }}" alt="SibSp vs. Survival Rate Chart" 
+     style="width: 100%; height: auto; border-radius: 10px;">
+{% endblock %}

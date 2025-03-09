@@ -1,0 +1,22 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Sex vs Survival<br></h1>
+<p>This bar plot examines the relationship between Sex and Survival Rate on the Titanic.<br><br></p>
+
+<h2>What Does This Bar Plot Show?<br></h2>
+<p>The graph represents the <strong>average survival rate</strong> for different Sex amounts.<br>
+    Higher Sex values often indicate a higher probability of survival.<br><br></p>
+
+<h2>Conclusions from this Analysis: <br></h2>
+<p>By analyzing the Sex column, we can conclude:<br>
+    <br><ul>
+        <li>Passengers who paid higher Sex had a better survival rate.</li>
+        <li>Lower Sex values correlate with a lower survival rate.</li>
+        <li>This suggests that passengers in higher classes had better chances of survival.</li>
+    </ul></p>
+{% endblock %}
+
+{% block image %}
+<img src="{{ chart_url }}" alt="Sex vs Survival Bar Plot" style="width: 100%; height: auto; border-radius: 10px;">
+{% endblock %}

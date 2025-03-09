@@ -1,0 +1,26 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Age vs. Survival Scatter Plot<br></h1>
+<p>This scatter plot visualizes the relationship between Age and survival.<br><br></p>
+
+<h2>What Does This Graph Show?<br></h2>
+<p>The <strong>scatter plot</strong> represents individual passengers, where color distinguishes survivors (1) from non-survivors (0).<br>
+   Due to **fewer passengers in the 50+ age group**, survival rates in that range appear to decrease.<br><br></p>
+
+<h2>Key Takeaways:<br></h2>
+<ul>
+    <li>Passengers aged **below 30** had a **higher survival rate**.</li>
+    <li>Survival rates were **lowest between ages 30-50**.</li>
+    <li>Although survival appears to drop for **50+ passengers**, this is likely influenced by their **smaller sample size**.</li>
+</ul>
+{% endblock %}
+
+{% block image %}
+<img src="{{ scatter_plot_url }}" alt="Age vs. Survival Scatter Plot" 
+     style="width: 100%; height: auto; border-radius: 10px;">
+
+<div class="button-container">
+    <a href="{{ url_for('age_regression') }}" class="go-back-button">More Detailed</a>
+</div>
+{% endblock %}

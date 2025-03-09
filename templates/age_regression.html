@@ -1,0 +1,22 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Age vs. Survival Regression Plot<br></h1>
+<p>This regression plot examines the relationship between Age and survival probability.<br><br></p>
+
+<h2>What Does This Graph Show?<br></h2>
+<p>The <strong>regression line</strong> estimates the probability of survival based on Age.<br>
+   A **U-shaped trend** emerges, but survival probability appears to **decline for passengers over 50**, possibly due to their **lower representation** in the dataset.<br><br></p>
+
+<h2>Key Takeaways:<br></h2>
+<ul>
+    <li>Children and younger passengers had a **higher** survival probability.</li>
+    <li>Passengers aged **30-50** had the **lowest** survival rates.</li>
+    <li>Survival probability **seems to decrease for 50+ passengers**, but this is likely due to their **lower numbers in the dataset**.</li>
+</ul>
+{% endblock %}
+
+{% block image %}
+<img src="{{ reg_plot_url }}" alt="Age vs. Survival Regression Plot" 
+     style="width: 100%; height: auto; border-radius: 10px;">
+{% endblock %}

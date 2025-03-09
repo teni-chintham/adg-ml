@@ -1,0 +1,26 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Heatmap<br></h1>
+<p>A heatmap is a tool visualizes data patterns and correlations using colors.<br><br></p>
+
+<h2>What is a Heatmap?<br></h2>
+<p>A <strong>Heatmap</strong> uses colors to show data values.<br>Brighter/Darker colors indicate higher values, helping to spot trends and correlations easily.<br><br></p>
+
+<h2>Conclusions from this Heatmap: <br></h2>
+<p>If we focus on the column for the survived which is our target <br><br>We can spot the 3 most impactful factors against survival:<br>
+    <br><ul>
+        <li>Sex</li>
+        <li>Pclass</li>
+        <li>Fare</li>
+    </ul></p>
+{% endblock %}
+
+
+{% block image %}
+<img src="{{ heatmap_url }}" alt="Correlation Heatmap" style="width: 100%; height: auto; border-radius: 10px;">
+
+<div class="button-container">
+    <a href="{{ url_for('correlation_bar') }}" class="go-back-button">More Detailed</a>
+</div>
+{% endblock %}

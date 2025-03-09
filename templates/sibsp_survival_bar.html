@@ -1,0 +1,27 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>SibSp vs. Survival<br></h1>
+<p>This bar plot examines the relationship between the number of siblings/spouses aboard (SibSp) and survival rate on the Titanic.<br><br></p>
+
+<h2>What Does This Bar Plot Show?<br></h2>
+<p>The graph represents the <strong>average survival rate</strong> for different SibSp values.<br>
+   The pattern suggests that having **exactly one** sibling/spouse resulted in the **highest survival rate**, while larger families (SibSp = 4+) had much lower survival probabilities.<br><br></p>
+
+<h2>Key Takeaways:<br></h2>
+<ul>
+    <li>Passengers with <strong>one sibling/spouse</strong> had the **highest survival rate**.</li>
+    <li>Survival for <strong>zero siblings/spouses</strong> was similar to having **two**.</li>
+    <li>Passengers with **four or more siblings/spouses** had the **lowest survival rate**.</li>
+    <li>Having **too few or too many** family members onboard may have impacted survival decisions.</li>
+</ul>
+{% endblock %}
+
+{% block image %}
+<img src="{{ chart_url }}" alt="SibSp vs. Survival Bar Plot" 
+     style="width: 100%; height: auto; border-radius: 10px;">
+
+<div class="button-container">
+    <a href="{{ url_for('sibsp_survival') }}" class="go-back-button">More Detailed</a>
+</div>
+{% endblock %}

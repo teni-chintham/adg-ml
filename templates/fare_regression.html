@@ -1,0 +1,23 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Fare vs. Survival Regression Plot<br></h1>
+<p>This regression plot helps analyze the relationship between ticket price (Fare) and survival probability.<br><br></p>
+
+<h2>What Does This Graph Show?<br></h2>
+<p>The <strong>regression line</strong> predicts survival likelihood based on fare price.<br>
+   The trend line suggests how increasing fare affects survival probability.<br><br></p>
+
+<h2>Key Takeaways:<br></h2>
+<ul>
+    <li>Passengers with higher fares generally had a higher survival probability.</li>
+    <li>The logistic regression curve models survival as a probability.</li>
+    <li>Lower fares are associated with a lower chance of survival.</li>
+    <li>Ignore the outlier its too far away from the main data to have any significance</li>
+</ul>
+{% endblock %}
+
+{% block image %}
+<img src="{{ reg_plot_url }}" alt="Fare vs. Survival Regression Plot" 
+     style="width: 100%; height: auto; border-radius: 10px;">
+{% endblock %}

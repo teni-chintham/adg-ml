@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1.1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+    <header class="header-container">
+        <script id="nav-logo" src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+        <dotlottie-player src="https://lottie.host/d08f8c15-56ad-4e66-9834-1adae860f132/H6DY06MN0t.json" background="transparent" speed="1" style="width: 80px; height: 80px;" loop autoplay></dotlottie-player>
+        <a href="{{ url_for('task_1_1_') }}" class="nav-items"><h3> EDA TASK-1.1 </h3></a>
+        <a href="{{ url_for('task_1_2_') }}" class="nav-items"><h3>MLM TASK-1.2</h3></a>
+        <a href="{{ url_for('task_1_3_') }}" class="nav-items"><h3>BONUS TASK-1.3</h3></a>
+    </header>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <h1>Data Analysis of Titanic Survival <br><br></h1>
+            <div class="buttons-wrapper">
+                <div class="button-container">
+                    <a href="{{ url_for('heatmap') }}" class="button">
+                        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+                        <dotlottie-player src="https://lottie.host/55ad747c-6ddb-4d63-8bfb-8ef98e1f7ed8/0rQO7358dS.json" background="transparent" speed="2" style="width: 200px; height: 200px;"  autoplay></dotlottie-player>
+                        <span>Heatmap</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('link_fare') }}" class="button">
+                        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/430ab733-1fa8-4974-ba69-7d050c95fcd0/NeUiYHovyY.lottie" background="transparent" speed="3" style="width: 200px; height: 200px" autoplay></dotlottie-player>
+                        <span>Fare V/S Survival</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('link_pclass') }}" class="button">
+                        <lottie-player src="https://lottie.host/dc1e5480-59b4-4e53-9124-6379d99b4d28/Q5XDmS6kTT.json" background="##FFFFFF" speed="1" style="width: 200px; height: 200px"  autoplay direction="1" mode="normal"></lottie-player>
+                        <span>PClass V/S Survival</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('link_age') }}" class="button">
+                        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/edab1bbd-9548-432a-ad11-dfe29cd98766/GDjAG5Emeu.lottie" background="transparent" speed="1" style="width: 200px; height: 200px" autoplay></dotlottie-player>
+                        <span>Age V/S Survival</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('link_sibsp') }}" class="button">
+                        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/abee5044-8d90-4129-a34f-86eef17cd3f9/RkAs6WLuGM.lottie" background="transparent" speed="1" style="width: 200px; height: 200px" autoplay></dotlottie-player>
+                        <span>SibSp V/S Survival</span>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a href="{{ url_for('link_sex') }}" class="button">
+                        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/96698c04-a753-4dad-a5b9-cbc69bafc805/m72wXuVnki.lottie" background="transparent" speed="1" style="width: 200px; height: 200px" autoplay></dotlottie-player>
+                        <span>Sex V/S Survival</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="button-container-1">
+            <a href="{{ url_for('link') }}" class="get-started-btn">Go Back</a>
+        </div>
+    </div>
+
+    
+
+    <footer class="footer-content">
+        <a href="" class="footer-items" target="_blank">
+            <img src="https://avatars.githubusercontent.com/u/9919?v=4" width="50" height="50" alt="GitHub Logo">
+        </a>
+    </footer>
+</body>
+
+</html> 

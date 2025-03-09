@@ -1,0 +1,26 @@
+{% extends "graphlayout.html" %}
+
+{% block content %}
+<h1>Fare vs. Survival Scatter Plot<br></h1>
+<p>This scatter plot visualizes how ticket price (Fare) relates to survival.<br><br></p>
+
+<h2>What Does This Graph Show?<br></h2>
+<p>The <strong>scatter plot</strong> represents individual passengers.<br>
+   The color distinguishes between those who survived (1) and those who did not (0).<br><br></p>
+
+<h2>Key Takeaways:<br></h2>
+<ul>
+    <li>Passengers with higher fares generally had a greater survival rate.</li>
+    <li>Lower fare passengers were less likely to survive, reinforcing the link between fare and class.</li>
+    <li>Since survival is binary (0 or 1), the density of points is key for regression analysis.</li>
+    <li>There is an outlier above $500 that is too isolated to significantly impact the overall trend.</li>
+</ul>
+{% endblock %}
+
+{% block image %}
+<img src="{{ scatter_plot_url }}" alt="Fare vs. Survival Scatter Plot" style="width: 100%; height: auto; border-radius: 10px;">
+
+<div class="button-container">
+    <a href="{{ url_for('fare_regression') }}" class="go-back-button">More Detailed</a>
+</div>
+{% endblock %}
